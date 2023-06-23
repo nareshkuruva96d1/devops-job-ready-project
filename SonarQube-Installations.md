@@ -102,7 +102,11 @@ mvn clean verify sonar:sonar \
   -Dsonar.login=squ_e67c32d50a494918967379c6d408eaac78603b11
 ```
 * if we pass the arguments like this without passing the projectkey then it will automatically takes that from the pom.xml
-
+```bash
+mvn clean verify sonar:sonar \
+-Dsonar.host.url=http://34.16.140.226:9000 \
+-Dsonar.login=squ_e67c32d50a494918967379c6d408eaac78603b11
+```
 
 
 
