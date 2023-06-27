@@ -1,3 +1,10 @@
+# Nexus:
+* Nexus is the place where we can store all the artifacts. like war,jar,container images.....
+* Compititors for the Nexus are Jfrog, S3,GCS.
+* In real world we have to pull and push artifacts to the organizations repositories. like Nexus, Jfrog, S3 and GCS, Org won't allow to pull from the central repo like maven central repo, Docker.hub,.....
+* In every Organization we have two teams that are Enterprise team, and Application team.
+  * Enterprise will take care of updating the org repo with the latest artifacts and dependancies.
+  * Application team will make use of that and used it for application developments.
 # Create a VM
 ```bash
 gcloud compute instances create nexusserver --zone=us-west4-b --machine-type=e2-medium --create-disk=auto-delete=yes,boot=yes,device-name=sonar,image=projects/centos-cloud/global/images/centos-7-v20221206,mode=rw,size=20
