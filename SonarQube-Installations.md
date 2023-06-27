@@ -190,6 +190,14 @@ and run the following command:
 * from now this project will consider our specific quality gate while scanning.
 * We can verify this by re-running the project.
 
+# Creation of user in SonarQube:
+## Steps to create user on SonarQube:
+* Click on administration>security>users>enter user-name,name,emailid,password>click on create. Then it will create the user.
+* We also can give the administration access to the user- Click on administration>security>users>click on the user group>click on all>select the adminitrations.
+* "We should not give this administration access to all user. Ex: Developers".
+
+# SonarQube Webhook configuration:
+
 
 
 
