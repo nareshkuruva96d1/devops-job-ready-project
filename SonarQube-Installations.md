@@ -143,7 +143,11 @@ You can find the latest version of the Gradle plugin here.
      * yum search java
      * yum install java-11-openjdk.i686 -y
      ```
-     * we can check the multiple java versions
+     * we can check the multiple java versions using the below command
+       ```bash
+       alternatives --config java
+       ```
+    * after adding the alternate java version, we need to add the one more argument to the below command.
 
 You can find the latest version of the Gradle plugin here.
 and run the following command:
@@ -151,7 +155,10 @@ and run the following command:
 ./gradlew sonarqube \
   -Dsonar.projectKey=adsvc \
   -Dsonar.host.url=http://34.125.16.180:9000 \
-  -Dsonar.login=squ_e67c32d50a494918967379c6d408eaac78603b11 
+  -Dsonar.login=squ_e67c32d50a494918967379c6d408eaac78603b11
+  -Dorg.gradle.java.home=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.el7_9.i386/
+
+  * After executing above command build gets succeded.
 
 
 
