@@ -160,6 +160,27 @@ and run the following command:
 
   * After executing above command build gets succeded.
 
+# SonarQube Quality Profiles configurations:
+## Quality Profiles:
+* It is a collection of rules, which are going to apply when we are performing an analysis.
+* In Java there might be rule where around 643 rules are in to picture.
+* We will be having default Quality Profile, and that QP will be having certain rules pre defined.
+* Lets asume I don't want all those rules to be implemented in my project, may be I need 4 rules to be analysed,
+  * we need to create our own quality profile.
+  * and we need to include the rules we want to have in that quality profile.
+## Steps to create QP:
+* click on Quality Profiles>click on create>give the name, Language>and click on create it will create the quality profile.
+* After creating the QP we need to activate the rules, for that just click on Active More, then it will populate all the 627 rules, here we can activate what are the rules that we want to activate for our Qp. while activating the rule we can see the severity like  major, blocker, minor.
+* Afetr activating the rues if we go to the quality profiles for java we can see two QP's
+
+## Changing the default QP for the Projects:
+* Go to projects select the project for which you want to change the QP
+* In that go to project settings>quality profiles>for java click on the change the profile>change default to specific quality profile.>and save.
+* from now this project will consider our specific quality profilewhile scanning.
+* We can verify this by re-running the project.
+
+
+
 
 
 
