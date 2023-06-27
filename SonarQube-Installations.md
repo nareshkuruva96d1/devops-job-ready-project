@@ -105,6 +105,53 @@ mvn clean verify sonar:sonar \
 ```bash
 mvn clean verify sonar:sonar -Dsonar.host.url=http://34.125.91.183:9000 -Dsonar.login=squ_e67c32d50a494918967379c6d408eaac78603b11
 ```
+## Sonarqube with gradle:
+* for any application we can pass the sonarqube details in different ways.
+   * 1. we can pass through `pom.xml`
+     2. we can add all details to the property file and we can call that property file.
+     3. we also can pass the details(like url) in the runtime.
+    
+## steps for SonarQube gradle:
+* create the project manually
+    * enter the project dispaly name
+    * enter the project key
+* next click on locally
+* here we can generate `token` or we can use the `existing token` and click on continue
+* now we need to select the `gradle`
+* Execute the Scanner for Gradle
+Running an analysis with Gradle is straighforward. You just need to declare the org.sonarqube plugin in your build.gradle file:
+
+plugins {
+  id "org.sonarqube" version "3.4.0.2513"
+}
+You can find the latest version of the Gradle plugin here.
+
+* we need to add the above plugin in build.gradle
+## Errors :
+* if we did not maintain the above plugin in the build.gredle and if we do not maintain the supported java version we will get the following error
+* FAILURE: Build failed with an exception.
+* 1."Task sonarqube not found in root project hipstershop" - if we did not maintain the above plugin in the build.gredle then we will get this error.
+* 2. "General error during semantic analysis: Unsupported class file major version 61" - here the version 61 means java 17 so it is not able compile the code with the java 17, so we have maintian the proper version of java.
+
+## Solution:
+* 1. add this plugin in the build.gradle file 
+     plugins {
+  id "org.sonarqube" version "3.4.0.2513"
+  }
+* 2. we need to configure the required java version in the machine
+     ```bash
+     * yum search java
+     * yum install java-11-openjdk.i686 -y
+     ```
+     * we can check the multiple java versions
+
+You can find the latest version of the Gradle plugin here.
+and run the following command:
+
+./gradlew sonarqube \
+  -Dsonar.projectKey=adsvc \
+  -Dsonar.host.url=http://34.125.16.180:9000 \
+  -Dsonar.login=squ_e67c32d50a494918967379c6d408eaac78603b11 
 
 
 
