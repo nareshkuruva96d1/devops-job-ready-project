@@ -179,6 +179,17 @@ and run the following command:
 * from now this project will consider our specific quality profilewhile scanning.
 * We can verify this by re-running the project.
 
+## Quality Gates:
+## Steps to crate the Quality Gate:
+* Click on Quality gate>click on create>give the name for the Quality Gate>click on add conditions>Here we have to two options that are 1. on new code 2. on overall code>1st select On Overall Code and in the below dropdown select coverage and enter the value that is 50 or somthing.
+* We can add many more conditions for one quality gates>
+
+## Changing the default QG for the Projects:
+* Go to projects select the project for which you want to change the QG
+* In that go to project settings>quality gate>change default to specific quality gate.>and save.
+* from now this project will consider our specific quality gate while scanning.
+* We can verify this by re-running the project.
+
 
 
 
