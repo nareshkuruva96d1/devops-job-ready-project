@@ -7,7 +7,7 @@
   * Application team will make use of that and used it for application developments.
 # Create a VM
 ```bash
-gcloud compute instances create nexusserver --zone=us-west4-b --machine-type=e2-medium --create-disk=auto-delete=yes,boot=yes,device-name=sonar,image=projects/centos-cloud/global/images/centos-7-v20221206,mode=rw,size=20
+gcloud compute instances create nexusserver --zone=us-west4-b --machine-type=e2-medium --create-disk=auto-delete=yes,boot=yes,device-name=nexus,image=projects/centos-cloud/global/images/centos-7-v20221206,mode=rw,size=20
 ```
 # Installing Nexus on Centos:
 ```bash
