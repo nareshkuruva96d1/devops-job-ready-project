@@ -5,6 +5,8 @@
 * In every Organization we have two teams that are Enterprise team, and Application team.
   * Enterprise will take care of updating the org repo with the latest artifacts and dependancies.
   * Application team will make use of that and used it for application developments.
+* If we get any java depency issues, then we need to do some configurations in /opt/nexus/bin/nexus, here we need to uncomment the INSTALL4J_JAVA_HOME_OVERRIDE= and pass the java path.
+* We can get the path of the alternative java by using this command `alternatives --config java`
 # Create a VM
 ```bash
 gcloud compute instances create nexusserver --zone=us-west4-b --machine-type=e2-medium --create-disk=auto-delete=yes,boot=yes,device-name=nexus,image=projects/centos-cloud/global/images/centos-7-v20221206,mode=rw,size=20
